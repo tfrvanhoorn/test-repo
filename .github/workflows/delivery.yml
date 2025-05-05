@@ -23,6 +23,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         release_branches: '_NONE_'
         pre_release_branches: master
-        default_prerelease_bump: prepatch
+        default_prerelease_bump: prerelease
         append_to_pre_release_tag: pre
         tag_prefix: v
