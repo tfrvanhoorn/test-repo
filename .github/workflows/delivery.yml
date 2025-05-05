@@ -16,13 +16,21 @@ jobs:
       with:
         fetch-depth: 0
 
+    # - name: Create new pre-release tag
+    #   id: tag_version
+    #   uses: mathieudutour/github-tag-action@v6.2
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     release_branches: '_NONE_'
+    #     pre_release_branches: master
+    #     default_prerelease_bump: prerelease
+    #     append_to_pre_release_tag: pre
+    #     tag_prefix: v
+
     - name: Create new pre-release tag
       id: tag_version
       uses: mathieudutour/github-tag-action@v6.2
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        release_branches: '_NONE_'
-        pre_release_branches: master
-        default_prerelease_bump: prerelease
-        append_to_pre_release_tag: pre
+        release_branches: 'master'
         tag_prefix: v
